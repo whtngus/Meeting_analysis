@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="즐겨 쳦는 계정 추가"
+                android:id="@+id/favorites"
+                app:bootstrapBrand="success"
+                app:bootstrapSize="lg"
+                app:buttonMode="regular"
+                app:showOutline="false"
+                app:roundedCorners="true"
+                />
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:bootstrapBrand="primary"
+            app:bootstrapSize="lg"
+            android:text="회의 시작"
+            app:roundedCorners="true"
+            android:id="@+id/start_meeting"/>
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:bootstrapBrand="danger"
+            app:bootstrapSize="lg"
+            android:text="회의록 검색"
+            android:id="@+id/search_meeting"/>
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="회의 참가"
+            app:bootstrapBrand="primary"
+            app:bootstrapSize="lg"
+            android:id="@+id/participation_meeting"/>
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="추가된 계정/그룹 보기"
+            app:bootstrapBrand="warning"
+            app:bootstrapSize="lg"
+            android:id="@+id/view_accounts"/>
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="캘린더"
+            app:bootstrapBrand="primary"
+            app:bootstrapSize="lg"
+            android:id="@+id/calender"/>
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="설정"
+            app:bootstrapBrand="primary"
+            app:bootstrapSize="lg"
+            android:id="@+id/setting"/>
+
+    </LinearLayout>
+</ScrollView>
