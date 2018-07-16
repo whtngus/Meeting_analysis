@@ -8,7 +8,7 @@ import operator
 from konlpy.tag import Twitter
 import math
 
-class Tf_Ids:
+class Tf_Idsf:
     def __init__(self,doc_size,load_list):
         #데이터 로드
         talk_list = []
@@ -29,9 +29,14 @@ class Tf_Ids:
         del word_list
     
     
-        self.tf_ids = self.tf_ids(doc_size,words)
-        sorted_x = sorted(self.tf_ids.items(), key=operator.itemgetter(1))
-        print("tf_ids : ",sorted_x)
+        self.tf_idsf = self.tf_ids(doc_size,words)
+        self.tf_idsf = sorted(self.tf_idsf.items(), key=operator.itemgetter(1),reverse=True)
+        # sorted_x = sorted(self.tf_ids.items())
+        # print("tf_ids : ",sorted_x[1:])
+        # return sorted_x[1:]
+
+    def get_result(self):
+        return self.tf_idsf[1:]
         
     
     def tf_ids(self,doc_size,word_list):
@@ -110,7 +115,7 @@ class Tf_Ids:
             strs = ''
             for t in twitter.pos(i, norm=True, stem=True):
                 #if (t[1] in want) and (t[0] not in stopword):
-                if (t[1] in want) and (t[0] not in stopword) and (len(t[0]) > 3):
+                if (t[1] in want) and (t[0] not in stopword) and (len(t[0]) > 2):
                     strs = strs + " " + t[0]  
         
             pos.append(strs[1:])

@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
-import Word2Vec
-import Tf_Ids
+import Tf_Idsf
 
 
 #load = ["6CM00079.txt","6CM00080.txt","6CM00082.txt","6CM00083.txt","6CM00088.txt","6CM00090.txt","6CM00092.txt","6CM00093.txt","6CM00094.txt","6CM00095.txt"]
@@ -20,4 +19,7 @@ print(result)
 
 
 
-tfidf = Tf_Ids.Tf_Ids(40,load)
+tfidf = Tf_Idsf.Tf_Idsf(40,load)
+data = tfidf.get_result()
+for i in data:
+	print(i)
